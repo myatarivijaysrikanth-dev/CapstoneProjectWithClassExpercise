@@ -17,7 +17,7 @@ jest.mock('axios', () => ({
 const renderLogin = () => {
   render(
     <MemoryRouter>
-      <AuthProvider>
+      <AuthProvider>npm
         <Login />
       </AuthProvider>
     </MemoryRouter>
