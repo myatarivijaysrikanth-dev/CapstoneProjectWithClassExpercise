@@ -20,7 +20,7 @@ const AnswerCard = ({ answer, onDeleted }) => {
       const data = await answerService.getLikeCount(answer._id);
       setLikeCount(data.count);
     } catch (err) {
-      // silently fail
+     
     }
   };
 
@@ -35,7 +35,7 @@ const AnswerCard = ({ answer, onDeleted }) => {
         await answerService.unlikeAnswer(answer._id);
         setLikeCount((prev) => Math.max(prev - 1, 0));
       } catch {
-        // silently fail
+        
       }
     } finally {
       setLikeLoading(false);
@@ -94,7 +94,7 @@ const AnswerCard = ({ answer, onDeleted }) => {
               )}
             </Button>
 
-            {/* Admin delete */}
+          
             {user && user.roleId === 2 && (
               <Button
                 variant="outline-danger"

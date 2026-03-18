@@ -65,7 +65,7 @@ const Chat = () => {
                       style={{ cursor: "pointer" }}
                       className="d-flex align-items-center gap-3"
                     >
-                      {/* Avatar */}
+                     
                       <div
                         className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
                         style={{

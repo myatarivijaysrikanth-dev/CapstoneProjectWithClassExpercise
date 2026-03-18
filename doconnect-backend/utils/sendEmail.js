@@ -1,10 +1,10 @@
-const nodemailer = require('nodemailer');
-const User = require('../models/User');
+const nodemailer = require("nodemailer");
+const User = require("../models/User");
 
 const sendEmail = async (subject, text) => {
   try {
     const admin = await User.findOne({ roleId: 2, isActive: true });
-    if (!admin) return; 
+    if (!admin) return;
 
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
@@ -22,7 +22,7 @@ const sendEmail = async (subject, text) => {
       text,
     });
   } catch (error) {
-    console.log('Email notification skipped:', error.message);
+    console.log("Email notification skipped:", error.message);
   }
 };
 
