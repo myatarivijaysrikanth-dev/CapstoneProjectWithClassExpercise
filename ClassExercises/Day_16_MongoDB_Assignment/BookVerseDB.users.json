@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "69a73c4331c74582539496f4"
+  },
+  "name": "Vijay",
+  "email": "vijay@gmail.com",
+  "joinDate": {
+    "$date": "2025-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a73c4331c74582539496f6"
+  },
+  "name": "Priya",
+  "email": "priya@gmail.com",
+  "joinDate": {
+    "$date": "2025-03-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a7438f31c74582539496fd"
+  },
+  "name": "Arjun",
+  "email": "arjun@gmail.com",
+  "joinDate": {
+    "$date": "2026-03-03T20:24:47.348Z"
+  }
+}]

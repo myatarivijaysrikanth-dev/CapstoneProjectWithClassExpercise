@@ -1,0 +1,39 @@
+body{
+  background:#f4f7fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navbar-brand{
+  font-weight:bold;
+  font-size:22px;
+}
+
+.book-card{
+  border-radius:16px;
+  transition:all 0.3s ease;
+}
+
+.book-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.form-card{
+  max-width:600px;
+  margin:auto;
+  border-radius:20px;
+  transition:all 0.3s ease;
+  border:none;
+}
+
+.form-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.page-container{
+  padding-top:90px;
+}
+.card{
+  border:none;
+}

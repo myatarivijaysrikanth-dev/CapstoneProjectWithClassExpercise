@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "69a7425df54fd8182ca51278"
+  },
+  "title": "Harry Potter",
+  "genre": "Fantasy",
+  "publicationYear": 2018,
+  "authorId": {
+    "$oid": "69a73ad131c74582539496f1"
+  },
+  "ratings": [
+    {
+      "user": "Vijay",
+      "score": 5,
+      "comment": "Excellent!"
+    },
+    {
+      "user": "Arjun",
+      "score": 4,
+      "comment": "Very good book"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69a7425df54fd8182ca51279"
+  },
+  "title": "Foundation",
+  "genre": "Science Fiction",
+  "publicationYear": 2016,
+  "authorId": {
+    "$oid": "69a73ad131c74582539496f2"
+  },
+  "ratings": []
+},
+{
+  "_id": {
+    "$oid": "69a7425df54fd8182ca5127a"
+  },
+  "title": "Game of Thrones",
+  "genre": "Fantasy",
+  "publicationYear": 2019,
+  "authorId": {
+    "$oid": "69a73ad131c74582539496f3"
+  },
+  "ratings": []
+},
+{
+  "_id": {
+    "$oid": "69a7425df54fd8182ca5127b"
+  },
+  "title": "I, Robot",
+  "genre": "Science Fiction",
+  "publicationYear": 2015,
+  "authorId": {
+    "$oid": "69a73ad131c74582539496f2"
+  },
+  "ratings": []
+},
+{
+  "_id": {
+    "$oid": "69a7425df54fd8182ca5127c"
+  },
+  "title": "Fantastic Beasts",
+  "genre": "Fantasy",
+  "publicationYear": 2020,
+  "authorId": {
+    "$oid": "69a73ad131c74582539496f1"
+  },
+  "ratings": []
+}]

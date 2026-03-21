@@ -1,0 +1,72 @@
+BookVerseDB – MongoDB Assignment 
+ 
+  User Story 1 — Database Setup & Data Modeling
+  -----------------------------------------------
+
+1.  Created Database: use BookVerseDB
+
+2.  Verified Collections: show collections
+
+3.  Inserted Sample Authors: db.authors.insertMany([ { name: “J.K.
+    Rowling”, nationality: “British”, birthYear: 1965 }, { name: “Isaac
+    Asimov”, nationality: “American”, birthYear: 1920 }, { name: “George
+    R.R. Martin”, nationality: “American”, birthYear: 1948 }])
+
+4.  Inserted Sample Users: db.users.insertMany([ { name: “Vijay”, email:
+    “vijay@gmail.com”, joinDate: new Date(“2025-01-10”) }, { name:
+    “Ravi”, email: “ravi@gmail.com”, joinDate: new Date(“2025-02-15”) },
+    { name: “Priya”, email: “priya@gmail.com”, joinDate: new
+    Date(“2025-03-01”) }])
+
+5.  Inserted Sample Books: db.books.insertMany([ { title: “Harry
+    Potter”, genre: “Fantasy”, publicationYear: 2018, authorId:
+    ObjectId(“AUTHOR_ID_1”), ratings: [] }, { title: “Foundation”,
+    genre: “Science Fiction”, publicationYear: 2016, authorId:
+    ObjectId(“AUTHOR_ID_2”), ratings: [] }, { title: “Game of Thrones”,
+    genre: “Fantasy”, publicationYear: 2019, authorId:
+    ObjectId(“AUTHOR_ID_3”), ratings: [] }, { title: “I, Robot”, genre:
+    “Science Fiction”, publicationYear: 2015, authorId:
+    ObjectId(“AUTHOR_ID_2”), ratings: [] }, { title: “Fantastic Beasts”,
+    genre: “Fantasy”, publicationYear: 2020, authorId:
+    ObjectId(“AUTHOR_ID_1”), ratings: [] }])
+
+Data Modeling Used: - One-to-Many (Author → Books) using authorId
+reference - One-to-Many (Book → Ratings) using embedded ratings array
+
+
+
+  User Story 2 — CRUD Operations
+  --------------------------------
+
+CREATE: db.users.insertOne({ name: “Arjun”, email: “arjun@gmail.com”,
+joinDate: new Date() })
+
+db.books.insertOne({ title: “New Sci-Fi Book”, genre: “Science Fiction”,
+publicationYear: 2023, authorId: ObjectId(“AUTHOR_ID”), ratings: [] })
+
+READ: db.books.find({ genre: “Science Fiction” })
+
+UPDATE: db.books.updateOne( { title: “Foundation” }, { $set: {
+publicationYear: 2022 } } )
+
+db.books.updateOne( { title: “Harry Potter” }, { $push: { ratings: {
+user: “Vijay”, score: 5, comment: “Excellent fantasy book!” } } } )
+
+DELETE: db.users.deleteOne({ name: “Ravi” })
+
+
+  User Story 3 — Querying & Filtering
+  -------------------------------------
+
+1.  Books Published After 2015: db.books.find({ publicationYear: { $gt:
+    2015 } })
+
+2.  Authors Who Wrote Fantasy Books: db.books.distinct(“authorId”, {
+    genre: “Fantasy” })
+
+3.  Users Joined Within Last 6 Months: db.users.find({ joinDate: { $gte:
+    new Date(new Date().setMonth(new Date().getMonth() - 6)) } })
+
+4.  Books With Average Rating Greater Than 4: db.books.aggregate([ {
+    $addFields: { avgRating: { $avg: "$ratings.score” } } }, { $match: {
+    avgRating: { $gt: 4 } } }])

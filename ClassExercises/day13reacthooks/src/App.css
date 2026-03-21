@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-align: center;
+  padding: 40px;
+  transition: 0.3s;
+}
+
+.container {
+  padding-top: 30px;
+}
+
+.container.light {
+  background: #f4f6f8;
+  color: #222;
+}
+
+.container.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+.workout-container {
+  background: white;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.container.dark .workout-container {
+  background: #2c2c2c;
+}
+
+.timer {
+  font-size: 48px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 8px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: scale(1.05);
+}
+body{
+background:#f4f6f8;
+}
+
+.workout-container h1{
+font-size:48px;
+font-weight:bold;
+}
+
+.card{
+border-radius:12px;
+}
+
+.card-title{
+font-size:14px;
+min-height:40px;
+}
+
+body.light {
+background:#f4f6f8;
+color:#222;
+}
+
+body.dark {
+background:#121212;
+color:white;
+}
+
+body.dark .card {
+background:#1f1f1f;
+color:white;
+}
