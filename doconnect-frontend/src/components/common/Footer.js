@@ -72,7 +72,7 @@ const Footer = () => {
         <hr style={{ borderColor: "#444" }} />
 
         <p className="text-center mb-0" style={{ fontSize: "0.8rem" }}>
-          © {new Date().getFullYear()} DoConnect.
+          &copy; {new Date().getFullYear()} DoConnect.
         </p>
       </Container>
     </footer>
